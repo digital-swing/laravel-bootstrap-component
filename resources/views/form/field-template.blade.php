@@ -10,14 +10,14 @@
           {!! $before !!}
         @endisset
 
-        @includeIf($field)
+        @@includeIf($field)
 
         @isset($after)
           {!! $after !!}
         @endisset
     </div>
   @else
-    @includeIf($field)
+    @@includeIf($field)
   @endif
 
   @if($help)

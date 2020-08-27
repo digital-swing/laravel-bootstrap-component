@@ -1,8 +1,9 @@
 <?php
 
-namespace Nh\BsComponent\View\Components\Form;
+namespace DigitalSwing\LBC\View\Components\Form;
 
 use Illuminate\View\Component;
+use function Roots\view;
 
 class Dynamic extends Component
 {

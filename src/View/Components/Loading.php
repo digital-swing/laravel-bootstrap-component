@@ -1,8 +1,9 @@
 <?php
 
-namespace Nh\BsComponent\View\Components;
+namespace DigitalSwing\LBC\View\Components;
 
 use Illuminate\View\Component;
+use function Roots\view;
 
 class Loading extends Component
 {

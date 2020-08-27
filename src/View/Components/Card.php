@@ -3,6 +3,7 @@
 namespace DigitalSwing\LBC\View\Components;
 
 use Illuminate\View\Component;
+use function Roots\view;
 
 class Card extends Component
 {
@@ -38,6 +39,6 @@ class Card extends Component
      */
     public function render()
     {
-        return \Roots\view('bs-component::card');
+        return view('bs-component::card');
     }
 }

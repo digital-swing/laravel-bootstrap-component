@@ -3,6 +3,7 @@
 namespace DigitalSwing\LBC\View\Components;
 
 use Illuminate\View\Component;
+use function Roots\view;
 
 class Alert extends Component
 {

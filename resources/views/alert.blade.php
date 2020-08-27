@@ -3,7 +3,7 @@
   {!! $slot !!}
 
   @if($closable)
-    <button type="button" class="close" data-dismiss="alert" aria-label="@lang('bs-component::button.close')">
+    <button type="button" class="close" data-dismiss="alert" aria-label="{!! __('Close', 'sage' )!!}">
       <span aria-hidden="true">&times;</span>
     </button>
   @endif

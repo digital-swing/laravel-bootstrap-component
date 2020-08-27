@@ -9,7 +9,7 @@
           @elseif(is_null($item))
             <li class="breadcrumb-item">{{ $key }}</li>
           @else
-            <li class="breadcrumb-item"><a href="{{ Route::has($item) ? route($item) : $item }}">{{ $key }}</a></li>
+            <li class="breadcrumb-item"><a href="">{{ $key }}</a></li>
           @endif
 
       @endforeach
@@ -17,3 +17,4 @@
     </ol>
   </nav>
 @endisset
+{{-- {{ Route::has($item) ? route($item) : $item }} --}}

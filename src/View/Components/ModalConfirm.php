@@ -1,8 +1,9 @@
 <?php
 
-namespace Nh\BsComponent\View\Components;
+namespace DigitalSwing\LBC\View\Components;
 
 use Illuminate\View\Component;
+use function Roots\view;
 
 class ModalConfirm extends Component
 {
@@ -144,6 +145,7 @@ class ModalConfirm extends Component
      *
      * @return void
      */
+
     public function __construct($color = 'primary', $icon = null, $title = null, $action = '#', $method = 'POST', $footer = null, $size = 'md', $centered = false, $scrollable = false, $fullscreen = false, $fullscreenSize = null, $isStatic = false, $btnCancel = [], $btnConfirm = [])
     {
         $this->color                = $color;

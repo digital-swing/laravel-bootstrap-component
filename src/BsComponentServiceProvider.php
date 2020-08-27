@@ -9,7 +9,7 @@ class BsComponentServiceProvider extends ServiceProvider
 {
 
     /**
-     * Register bindings in the container.
+     * Register bindings in the container
      *
      * @return void
      */
@@ -58,5 +58,8 @@ class BsComponentServiceProvider extends ServiceProvider
         Blade::component('bs-loading', \DigitalSwing\LBC\View\Components\Loading::class);
         Blade::component('bs-progress', \DigitalSwing\LBC\View\Components\Progress::class);
         Blade::component('bs-toast', \DigitalSwing\LBC\View\Components\Toast::class);
+
+        Blade::component('bs-navs', \DigitalSwing\LBC\View\Components\Navs::class);
+        Blade::component('bs-tooltip', \DigitalSwing\LBC\View\Components\Tooltip::class);
     }
 }
