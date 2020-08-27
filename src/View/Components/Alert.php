@@ -1,6 +1,6 @@
 <?php
 
-namespace Nh\BsComponent\View\Components;
+namespace DigitalSwing\LBC\View\Components;
 
 use Illuminate\View\Component;
 

@@ -1,27 +1,29 @@
 {
-    "name": "nh/bs-component",
-    "description": "Bootstrap components",
-    "license": "MIT",
-    "type": "library",
-    "require": {},
-    "author": {
-        "name": "Natacha Herth",
-        "email": "info@natachaherth.ch"
-    },
-    "autoload": {
-        "files": [
-            "src/Helpers/ArrayToDot.php"
-        ],
-        "psr-4": {
-            "Nh\\BsComponent\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Nh\\BsComponent\\BsComponentServiceProvider"
-            ]
-        }
-    },
-    "minimum-stability": "dev"
+  "name": "digital-swing/laravel-bootstrap-component",
+  "description": "Bootstrap Laravel",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Digital Swing",
+      "email": "contact@digital-swing.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "src/Helpers/ArrayToDot.php"
+    ],
+    "psr-4": {
+      "DigitalSwing\\LBC\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DigitalSwing\\LBC\\BsComponentServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {}
 }

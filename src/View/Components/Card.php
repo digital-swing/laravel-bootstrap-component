@@ -1,6 +1,6 @@
 <?php
 
-namespace Nh\BsComponent\View\Components;
+namespace DigitalSwing\LBC\View\Components;
 
 use Illuminate\View\Component;
 
@@ -38,6 +38,6 @@ class Card extends Component
      */
     public function render()
     {
-        return view('bs-component::card');
+        return \Roots\view('bs-component::card');
     }
 }
