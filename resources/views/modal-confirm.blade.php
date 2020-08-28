@@ -13,8 +13,8 @@
 
       <div class="modal-body text-center">
         <form action="{{ $action }}" method="POST">
-          @csrf
-          @method($method)
+      {{--     @csrf
+          @method($method) --}}
             {!! $slot !!}
             <button type="button" class="btn {{ $btnCancel['class'] }}" data-dismiss="modal" aria-label="{{ $btnCancel['label'] }}">
               {!! $btnCancel['value'] !!}
