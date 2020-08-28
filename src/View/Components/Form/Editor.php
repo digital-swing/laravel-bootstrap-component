@@ -2,7 +2,7 @@
 
 namespace DigitalSwing\LBC\View\Components\Form;
 
-use Illuminate\View\Component;
+use Roots\Acorn\View\Component;
 use Illuminate\Support\Str;
 use function Roots\view;
 

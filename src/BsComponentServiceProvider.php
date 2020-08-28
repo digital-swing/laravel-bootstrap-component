@@ -2,7 +2,7 @@
 
 namespace DigitalSwing\LBC;
 
-use Illuminate\Support\ServiceProvider;
+use Roots\Acorn\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 
 class BsComponentServiceProvider extends ServiceProvider

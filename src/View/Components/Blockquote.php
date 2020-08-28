@@ -2,7 +2,7 @@
 
 namespace DigitalSwing\LBC\View\Components;
 
-use Illuminate\View\Component;
+use Roots\Acorn\View\Component;
 use function Roots\view;
 
 class Blockquote extends Component

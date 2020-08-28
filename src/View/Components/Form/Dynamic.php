@@ -2,7 +2,7 @@
 
 namespace DigitalSwing\LBC\View\Components\Form;
 
-use Illuminate\View\Component;
+use Roots\Acorn\View\Component;
 use function Roots\view;
 
 class Dynamic extends Component
@@ -112,7 +112,7 @@ class Dynamic extends Component
      */
     public function isDynamic()
     {
-      return is_null($this->max) || $this->max != 1;
+        return is_null($this->max) || $this->max != 1;
     }
 
     /**
@@ -130,8 +130,8 @@ class Dynamic extends Component
 
         return [
           'class' => $class,
-          'label' => \Lang::has($label) ? trans_choice($label,1) : $label,
-          'value' => \Lang::has($value) ? trans_choice($value,1) : $value,
+          'label' => \Lang::has($label) ? trans_choice($label, 1) : $label,
+          'value' => \Lang::has($value) ? trans_choice($value, 1) : $value,
         ];
     }
 
@@ -153,10 +153,10 @@ class Dynamic extends Component
         $this->sortable         = $sortable;
         $this->items            = $items;
         $this->help             = $help;
-        $this->btnAdd           = $this->defineButton('add',$btnAdd);
-        $this->btnRemove        = $this->defineButton('remove',$btnRemove);
-        $this->btnDelete        = $this->defineButton('delete',$btnDelete);
-        $this->btnMove          = $this->defineButton('move',$btnMove);
+        $this->btnAdd           = $this->defineButton('add', $btnAdd);
+        $this->btnRemove        = $this->defineButton('remove', $btnRemove);
+        $this->btnDelete        = $this->defineButton('delete', $btnDelete);
+        $this->btnMove          = $this->defineButton('move', $btnMove);
     }
 
     /**

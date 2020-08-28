@@ -2,10 +2,9 @@
 
 namespace DigitalSwing\LBC\View\Components\Form;
 
-use Illuminate\View\Component;
+use Roots\Acorn\View\Component;
 use Illuminate\Support\Str;
 use function Roots\view;
-
 
 class Select extends Component
 {
@@ -59,7 +58,7 @@ class Select extends Component
      */
     public function isOptionSelected($option)
     {
-        $currentValues = old($this->cleanName,$this->optionsSelected);
+        $currentValues = old($this->cleanName, $this->optionsSelected);
         return in_array($option, (array)$currentValues);
     }
 
@@ -121,7 +120,7 @@ class Select extends Component
      *
      * @return void
      */
-    public function __construct($label = null, $name, $options, $help  = null, $size = null, $selected = [],  $multiple = false, $disabled = false, $required = false, $inputGroup = false)
+    public function __construct($label = null, $name, $options, $help  = null, $size = null, $selected = [], $multiple = false, $disabled = false, $required = false, $inputGroup = false)
     {
         $this->label            = $label;
         $this->name             = $name;

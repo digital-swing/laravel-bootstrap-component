@@ -2,7 +2,7 @@
 
 namespace DigitalSwing\LBC\View\Components\Form;
 
-use Illuminate\View\Component;
+use Roots\Acorn\View\Component;
 use Illuminate\Support\Str;
 
 class CheckList extends Component
@@ -58,7 +58,7 @@ class CheckList extends Component
      */
     public function isOptionChecked($option)
     {
-        $currentValues = old($this->cleanName,$this->optionsChecked);
+        $currentValues = old($this->cleanName, $this->optionsChecked);
         return in_array($option, (array)$currentValues);
     }
 
@@ -99,18 +99,18 @@ class CheckList extends Component
      *
      * @var string
      */
-     public function idOption($option)
-     {
+    public function idOption($option)
+    {
         return $this->cleanName.Str::upper($option);
-     }
+    }
 
-     /**
-      * Clean name
-      * Exemple: field[] become field
-      *
-      * @return string
-      */
-     public $cleanName;
+    /**
+     * Clean name
+     * Exemple: field[] become field
+     *
+     * @return string
+     */
+    public $cleanName;
 
 
     /**

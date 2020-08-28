@@ -2,7 +2,7 @@
 
 namespace DigitalSwing\LBC\View\Components\Form;
 
-use Illuminate\View\Component;
+use Roots\Acorn\View\Component;
 use Illuminate\Support\Str;
 use function Roots\view;
 
@@ -81,9 +81,8 @@ class Check extends Component
     {
         $value = old($this->cleanName);
 
-        if(!is_null($value))
-        {
-            return is_array($value) ? in_array($this->value,$value) : $value;
+        if (!is_null($value)) {
+            return is_array($value) ? in_array($this->value, $value) : $value;
         } else {
             return $default;
         }
@@ -94,18 +93,18 @@ class Check extends Component
      *
      * @var string
      */
-     public function id()
-     {
+    public function id()
+    {
         return $this->cleanName.Str::upper($this->value);
-     }
+    }
 
-     /**
-      * Clean name
-      * Exemple: field[] become field
-      *
-      * @return string
-      */
-     public $cleanName;
+    /**
+     * Clean name
+     * Exemple: field[] become field
+     *
+     * @return string
+     */
+    public $cleanName;
 
     /**
      * Create a new component instance.
