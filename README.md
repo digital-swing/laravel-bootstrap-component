@@ -152,7 +152,7 @@ _The align is for the caption._
 
 ```html
 <x-bs-figure caption="My caption" align="right">
-  <img src="https://fakeimg.pl/250x100/cccccc/" />
+  <img src="//placehold.it/250x100" />
 </x-bs-figure>
 ```
 
@@ -296,10 +296,10 @@ Or you can set an array with the custom values (class,label,value) for each butt
   class="show"
   title="My toast"
   time="11 min ago"
-  img="https://fakeimg.pl/20x20/007bff/fff"
+  img="//placehold.it/40x40"
   closable
   autohide
-  delay="100"
+  delay="4000"
 >
   Hey this is a toast !
 </x-bs-toast>
