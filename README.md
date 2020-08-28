@@ -115,9 +115,7 @@ Available components:
 _The keys in array are used to display the link text and the values are used for the href. The values can be an url or a route name._
 
 ```html
-<x-bs-breadcrumb
-  :items="['First' => 'home', 'Seconde' => '#','Third' => null,'Fourth' => '#']"
-/>
+<x-bs-breadcrumb />
 ```
 
 ## Card
