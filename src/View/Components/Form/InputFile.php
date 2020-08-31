@@ -89,8 +89,8 @@ class InputFile extends Component
     {
         $this->label        = $label;
         $this->name         = $name;
-        $this->placeholder  = is_null($placeholder) ? __('bs-component::button.choose-file') : $placeholder;
-        $this->button       = is_null($button) ? __('bs-component::button.browse') : $button;
+        $this->placeholder  = $placeholder;
+        $this->button       = $button;
         $this->help         = $help;
         $this->size         = $size;
         $this->isDisabled   = $disabled;
