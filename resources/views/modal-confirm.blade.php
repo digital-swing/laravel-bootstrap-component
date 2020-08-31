@@ -12,9 +12,9 @@
       </div>
 
       <div class="modal-body text-center">
-        <form action="{{ $action }}" method="POST">
-      {{--     @csrf
-          @method($method) --}}
+
+
+          <x-bs-form-template action="modal-confirm">
             {!! $slot !!}
             <button type="button" class="btn {{ $btnCancel['class'] }}" data-dismiss="modal" aria-label="{{ $btnCancel['label'] }}">
               {!! $btnCancel['value'] !!}
@@ -23,7 +23,8 @@
               <x-bs-loading class="d-none" type="border" size="sm" color="light"/>
               {!! $btnConfirm['value'] !!}
             </button>
-        </form>
+          </x-bs-form-template>
+
       </div>
 
       @if($footer)

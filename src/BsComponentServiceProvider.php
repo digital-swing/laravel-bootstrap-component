@@ -37,6 +37,7 @@ class BsComponentServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'bs-component');
 
         // BLADES
+        Blade::component('bs-form-template', \DigitalSwing\LBC\View\Components\Form\FormTemplate::class);
         Blade::component('bs-input', \DigitalSwing\LBC\View\Components\Form\Input::class);
         Blade::component('bs-textarea', \DigitalSwing\LBC\View\Components\Form\Textarea::class);
         Blade::component('bs-check-list', \DigitalSwing\LBC\View\Components\Form\CheckList::class);
