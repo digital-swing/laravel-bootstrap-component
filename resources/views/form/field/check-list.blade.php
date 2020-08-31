@@ -34,7 +34,8 @@
       type="{{ $type }}"
       name="{{ $name }}"
       value="{{ $key }}"
-      class="custom-control-input @error($cleanName) is-invalid @enderror"
+      class="custom-control-input "
+      {{-- class="custom-control-input @error($cleanName) is-invalid @enderror" --}}
       id="{{ $idOption($key).'Field' }}"
       {{ $isDisabled || $isOptionDisabled($key) ? 'disabled' : '' }}
       {{ $isOptionChecked($key) ? 'checked' : '' }}

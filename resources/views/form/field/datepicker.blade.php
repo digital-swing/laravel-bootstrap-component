@@ -1,8 +1,10 @@
 <input
   type="text"
   name="{{ $name }}"
-  value="{{ old($cleanName,$value) }}"
-  class="form-control date-picker {{ !empty($size) ? 'form-control-'.$size : '' }} @error($cleanName) is-invalid @enderror"
+  value=""
+  {{-- value="{{ old($cleanName,$value) }}" --}}
+  class="form-control date-picker {{ !empty($size) ? 'form-control-'.$size : '' }}"
+  {{-- class="form-control date-picker {{ !empty($size) ? 'form-control-'.$size : '' }} @error($cleanName) is-invalid @enderror" --}}
   id="{{ $cleanName.'Field' }}"
   @if($placeholder) placeholder="{{ $placeholder }}" @endif
   @if($help) aria-describedby="{{ $cleanName.'FieldHelp' }}" @endif
