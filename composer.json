@@ -1,29 +1,29 @@
 {
-    "name": "digital-swing/laravel-bootstrap-component",
-    "description": "Bootstrap Laravel",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Digital Swing",
-            "email": "contact@digital-swing.com"
-        }
+  "name": "digital-swing/laravel-bootstrap-component",
+  "description": "Bootstrap Laravel",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Digital Swing",
+      "email": "contact@digital-swing.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "src/Helpers/ArrayToDot.php"
     ],
-    "autoload": {
-        "files": [
-            "src/Helpers/ArrayToDot.php"
-        ],
-        "psr-4": {
-            "DigitalSwing\\LBC\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "DigitalSwing\\LBC\\BsComponentServiceProvider"
-            ]
-        }
-    },
-    "minimum-stability": "dev",
-    "require": {}
+    "psr-4": {
+      "DigitalSwing\\LBC\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DigitalSwing\\LBC\\BsComponentServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {}
 }

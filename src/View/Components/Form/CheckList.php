@@ -1,9 +1,10 @@
 <?php
 
-namespace Nh\BsComponent\View\Components\Form;
+namespace DigitalSwing\LBC\View\Components\Form;
 
-use Illuminate\View\Component;
+use Roots\Acorn\View\Component;
 use Illuminate\Support\Str;
+use function Roots\view;
 
 class CheckList extends Component
 {
@@ -56,11 +57,11 @@ class CheckList extends Component
      * @param  string  $option
      * @return boolean
      */
-    public function isOptionChecked($option)
-    {
-        $currentValues = old($this->cleanName,$this->optionsChecked);
-        return in_array($option, (array)$currentValues);
-    }
+    // public function isOptionChecked($option)
+    // {
+    //     $currentValues = old($this->cleanName, $this->optionsChecked);
+    //     return in_array($option, (array)$currentValues);
+    // }
 
     /**
      * Is the check list disabled.
@@ -99,18 +100,18 @@ class CheckList extends Component
      *
      * @var string
      */
-     public function idOption($option)
-     {
-        return $this->cleanName.Str::upper($option);
-     }
+    public function idOption($option)
+    {
+        return $this->cleanName . Str::upper($option);
+    }
 
-     /**
-      * Clean name
-      * Exemple: field[] become field
-      *
-      * @return string
-      */
-     public $cleanName;
+    /**
+     * Clean name
+     * Exemple: field[] become field
+     *
+     * @return string
+     */
+    public $cleanName;
 
 
     /**
@@ -121,11 +122,11 @@ class CheckList extends Component
     public function __construct($label = null, $type = 'checkbox', $name, $options, $help  = null, $checked = [], $disabled = false, $required = false)
     {
         $this->label            = $label;
-        $this->type             = in_array($type, ['checkbox','radio']) ? $type : 'checkbox';
+        $this->type             = in_array($type, ['checkbox', 'radio']) ? $type : 'checkbox';
         $this->name             = $name;
         $this->options          = $options;
         $this->help             = $help;
-        $this->optionsChecked   = (array)$checked;
+        // $this->optionsChecked   = (array)$checked;
         $this->isDisabled       = is_bool($disabled) ? $disabled : false; // Make all the options disabled
         $this->optionsDisabled  = is_array($disabled) ? $disabled : []; // Array of the key option that are disabled
         $this->isRequired       = $required;

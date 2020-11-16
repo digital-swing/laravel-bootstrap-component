@@ -20,16 +20,14 @@
   <input
     type="file"
     name="{{ $name }}"
-    class="custom-file-input @error($cleanName) is-invalid @enderror"
+    class="custom-file-input"
     id="{{ $cleanName.'Field' }}"
     @if($help) aria-describedby="{{ $cleanName.'FieldHelp' }}" @endif
     {{ $isDisabled ? 'disabled' : ''}}
     {{ $isRequired ? 'required' : ''}}
   >
-  <label class="custom-file-label" for="customFile">{{ $placeholder }}</label>
-  @error($cleanName)
-      <span class="invalid-feedback" role="alert">
-          {{ $message }}
-      </span>
-  @enderror
+  <label class="custom-file-label" for="customFile" 
+  data-browse="@isset($button) {{$button}} @else @lang('bs-component::button.browse')@endisset">
+@isset($placeholder) {{ $placeholder }} @else @lang('bs-component::button.choose-file') @endisset</label>
+
 </div>

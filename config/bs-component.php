@@ -22,8 +22,12 @@ return [
           'class' => 'btn-', // The color of the button is defined by the component option
           'label' => 'bs-component::button.confirm',
           'value' => 'bs-component::button.confirm',
+        ],
+        'close'  => [
+          'class' => 'btn-info',
+          'label' => 'bs-component::button.close',
+          'value' => 'bs-component::button.close',
         ]
-      ]
     ],
 
     /*
@@ -56,6 +60,7 @@ return [
           'class' => 'btn-info',
           'label' => 'bs-component::button.move',
           'value' => 'bs-component::button.move',
+        ]
         ]
       ]
     ],

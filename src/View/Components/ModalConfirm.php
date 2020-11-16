@@ -1,8 +1,11 @@
 <?php
 
-namespace Nh\BsComponent\View\Components;
+namespace DigitalSwing\LBC\View\Components;
 
-use Illuminate\View\Component;
+use Illuminate\Support\Facades\Lang;
+use Roots\Acorn\View\Component;
+use function Roots\view;
+use function Roots\config;
 
 class ModalConfirm extends Component
 {
@@ -110,13 +113,14 @@ class ModalConfirm extends Component
      *
      * @var string
      */
-    public function fullscreenClass(){
-      if($this->isFullscreen) {
-        $fullscreen = empty($this->fullscreenSize) ? 'modal-fullscreen' : 'modal-fullscreen-'.$this->fullscreenSize.'-down';
-      } else {
-        $fullscreen = '';
-      }
-      return $fullscreen;
+    public function fullscreenClass()
+    {
+        if ($this->isFullscreen) {
+            $fullscreen = empty($this->fullscreenSize) ? 'modal-fullscreen' : 'modal-fullscreen-'.$this->fullscreenSize.'-down';
+        } else {
+            $fullscreen = '';
+        }
+        return $fullscreen;
     }
 
     /**
@@ -134,8 +138,8 @@ class ModalConfirm extends Component
 
         return [
           'class' => $class,
-          'label' => \Lang::has($label) ? trans_choice($label,1) : $label,
-          'value' => \Lang::has($value) ? trans_choice($value,1) : $value,
+          'label' => Lang::has($label) ? trans_choice($label, 1) : $label,
+          'value' => Lang::has($value) ? trans_choice($value, 1) : $value,
         ];
     }
 
@@ -144,6 +148,7 @@ class ModalConfirm extends Component
      *
      * @return void
      */
+
     public function __construct($color = 'primary', $icon = null, $title = null, $action = '#', $method = 'POST', $footer = null, $size = 'md', $centered = false, $scrollable = false, $fullscreen = false, $fullscreenSize = null, $isStatic = false, $btnCancel = [], $btnConfirm = [])
     {
         $this->color                = $color;
@@ -158,8 +163,8 @@ class ModalConfirm extends Component
         $this->isFullscreen         = $fullscreen;
         $this->fullscreenSize       = $fullscreenSize;
         $this->isStatic             = $isStatic;
-        $this->btnCancel            = $this->defineButton('cancel',$btnCancel);
-        $this->btnConfirm           = $this->defineButton('confirm',$btnConfirm);
+        $this->btnCancel            = $this->defineButton('cancel', $btnCancel);
+        $this->btnConfirm           = $this->defineButton('confirm', $btnConfirm);
     }
 
     /**

@@ -1,8 +1,10 @@
 <?php
 
-namespace Nh\BsComponent\View\Components;
+namespace DigitalSwing\LBC\View\Components;
 
-use Illuminate\View\Component;
+use Roots\Acorn\View\Component;
+
+use function Roots\view;
 
 class Loading extends Component
 {
@@ -42,7 +44,7 @@ class Loading extends Component
      */
     public function __construct($type = 'border', $color = 'primary', $title = null, $size = 'md')
     {
-        $this->type   = in_array($type,['border','grow']) ? $type : 'border';
+        $this->type   = in_array($type, ['border','grow']) ? $type : 'border';
         $this->color  = $color;
         $this->title  = is_null($title) ? __('bs-component::button.loading') : $title;
         $this->size   = $size;

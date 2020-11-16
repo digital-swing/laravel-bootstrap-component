@@ -19,7 +19,8 @@
 --}}
 
 <select
-  class="custom-select {{ !empty($size) ? 'custom-select-'.$size : '' }} @error($cleanName) is-invalid @enderror"
+class="custom-select {{ !empty($size) ? 'custom-select-'.$size : '' }}"
+{{-- class="custom-select {{ !empty($size) ? 'custom-select-'.$size : '' }} @error($cleanName) is-invalid @enderror" --}}
   name="{{ $name }}"
   {{ $isMultiple ? 'multiple' : ''}}
   {{ $isDisabled ? 'disabled' : ''}}
@@ -27,7 +28,8 @@
 >
 
   @foreach ($options as $key => $value)
-    <option value="{{ $key }}" {{ $isOptionSelected($key) ? 'selected' : '' }} {{ $isOptionDisabled($key) ? 'disabled' : '' }}>{{ $value }}</option>
+    {{-- <option value="{{ $key }}" {{ $isOptionSelected($key) ? 'selected' : '' }} {{ $isOptionDisabled($key) ? 'disabled' : '' }}>{{ $value }}</option> --}}
+    <option value="{{ $key }}" {{ $isOptionDisabled($key) ? 'disabled' : '' }}>{{ $value }}</option>
   @endforeach
 
 </select>

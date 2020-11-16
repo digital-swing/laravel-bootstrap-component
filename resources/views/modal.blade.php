@@ -22,3 +22,7 @@
     </div>
   </div>
 </div>
+
+
+{{-- @lang('bs-component::button.close') --}}
+{{--    --}}

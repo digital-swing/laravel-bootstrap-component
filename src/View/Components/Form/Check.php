@@ -1,9 +1,10 @@
 <?php
 
-namespace Nh\BsComponent\View\Components\Form;
+namespace DigitalSwing\LBC\View\Components\Form;
 
-use Illuminate\View\Component;
+use Roots\Acorn\View\Component;
 use Illuminate\Support\Str;
+use function Roots\view;
 
 class Check extends Component
 {
@@ -76,35 +77,34 @@ class Check extends Component
      * @param  boolean $default
      * @return boolean
      */
-    private function defineIsChecked($default)
-    {
-        $value = old($this->cleanName);
+    // private function defineIsChecked($default)
+    // {
+    //     $value = old($this->cleanName);
 
-        if(!is_null($value))
-        {
-            return is_array($value) ? in_array($this->value,$value) : $value;
-        } else {
-            return $default;
-        }
-    }
+    //     if (!is_null($value)) {
+    //         return is_array($value) ? in_array($this->value, $value) : $value;
+    //     } else {
+    //         return $default;
+    //     }
+    // }
 
     /**
      * Generate the id of the checkbox
      *
      * @var string
      */
-     public function id()
-     {
-        return $this->cleanName.Str::upper($this->value);
-     }
+    public function id()
+    {
+        return $this->cleanName . Str::upper($this->value);
+    }
 
-     /**
-      * Clean name
-      * Exemple: field[] become field
-      *
-      * @return string
-      */
-     public $cleanName;
+    /**
+     * Clean name
+     * Exemple: field[] become field
+     *
+     * @return string
+     */
+    public $cleanName;
 
     /**
      * Create a new component instance.
@@ -114,7 +114,7 @@ class Check extends Component
     public function __construct($label = null, $type = 'checkbox', $name, $value = '1', $help = null, $checked = false, $disabled = false, $required = false, $boolean = false)
     {
         $this->label         = $label;
-        $this->type          = in_array($type, ['checkbox','radio']) ? $type : 'checkbox';
+        $this->type          = in_array($type, ['checkbox', 'radio']) ? $type : 'checkbox';
         $this->name          = $name;
         $this->value         = $value;
         $this->help          = $help;
@@ -122,7 +122,7 @@ class Check extends Component
         $this->isRequired    = $required;
         $this->isBoolean     = $boolean;
         $this->cleanName     = array_to_dot($this->name);
-        $this->isChecked     = $this->defineIsChecked($checked);
+        // $this->isChecked     = $this->defineIsChecked($checked);
     }
 
     /**
@@ -135,3 +135,12 @@ class Check extends Component
         return view('bs-component::form.check');
     }
 }
+/**
+ * REMARQUES :
+ *
+ *      La function : defineIsChecked($default)
+ *          contient "old()" et reourne une erreur
+ *
+ *      "DigitalSwing\LBC\View\Components\Form\old()"
+ *
+ */

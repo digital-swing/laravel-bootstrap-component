@@ -1,9 +1,10 @@
 <?php
 
-namespace Nh\BsComponent\View\Components\Form;
+namespace DigitalSwing\LBC\View\Components\Form;
 
-use Illuminate\View\Component;
+use Roots\Acorn\View\Component;
 use Illuminate\Support\Str;
+use function Roots\view;
 
 class Datepicker extends Component
 {
@@ -147,8 +148,8 @@ class Datepicker extends Component
         $this->isDisabled   = $disabled;
         $this->isRequired   = $required;
         $this->isInputGroup = $inputGroup;
-        $this->mode         = !is_null($mode) && in_array($mode,['single','multiple','range']) ? $mode : 'single';
-        $this->format       = !is_null($format) && in_array($format,['datetime','datetime-short','date','time','time-short','db-datetime','db-date','db-time']) ? $format : 'datetime';
+        $this->mode         = !is_null($mode) && in_array($mode, ['single','multiple','range']) ? $mode : 'single';
+        $this->format       = !is_null($format) && in_array($format, ['datetime','datetime-short','date','time','time-short','db-datetime','db-date','db-time']) ? $format : 'datetime';
         $this->min          = $min;
         $this->max          = $max;
         $this->minInput     = $minInput;

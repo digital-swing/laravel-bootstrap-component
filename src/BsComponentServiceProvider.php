@@ -1,20 +1,20 @@
 <?php
-namespace Nh\BsComponent;
 
-use Illuminate\Support\ServiceProvider;
+namespace DigitalSwing\LBC;
+
+use Roots\Acorn\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 
 class BsComponentServiceProvider extends ServiceProvider
 {
 
     /**
-     * Register bindings in the container.
+     * Register bindings in the container
      *
      * @return void
      */
     public function register()
     {
-
     }
 
     /**
@@ -25,39 +25,42 @@ class BsComponentServiceProvider extends ServiceProvider
     public function boot()
     {
 
-      // VENDORS
-      $this->publishes([
-          __DIR__.'/../config/bs-component.php' => config_path('bs-component.php')
-      ], 'bs-component');
+        // VENDORS
+        $this->publishes([
+            __DIR__ . '/../config/bs-component.php' => \Roots\config_path('bs-component.php')
+        ], 'bs-component');
 
-      // VIEWS
-      $this->loadViewsFrom(__DIR__.'/../resources/views', 'bs-component');
+        // VIEWS
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'bs-component');
 
-      // TRANSLATIONS
-      $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'bs-component');
+        // TRANSLATIONS
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'bs-component');
 
-      // BLADES
-      Blade::component('bs-input', \Nh\BsComponent\View\Components\Form\Input::class);
-      Blade::component('bs-textarea', \Nh\BsComponent\View\Components\Form\Textarea::class);
-      Blade::component('bs-check-list', \Nh\BsComponent\View\Components\Form\CheckList::class);
-      Blade::component('bs-select', \Nh\BsComponent\View\Components\Form\Select::class);
-      Blade::component('bs-input-file', \Nh\BsComponent\View\Components\Form\InputFile::class);
-      Blade::component('bs-datepicker', \Nh\BsComponent\View\Components\Form\Datepicker::class);
+        // BLADES
+        Blade::component('bs-form-template', \DigitalSwing\LBC\View\Components\Form\FormTemplate::class);
+        Blade::component('bs-input', \DigitalSwing\LBC\View\Components\Form\Input::class);
+        Blade::component('bs-textarea', \DigitalSwing\LBC\View\Components\Form\Textarea::class);
+        Blade::component('bs-check-list', \DigitalSwing\LBC\View\Components\Form\CheckList::class);
+        Blade::component('bs-select', \DigitalSwing\LBC\View\Components\Form\Select::class);
+        Blade::component('bs-input-file', \DigitalSwing\LBC\View\Components\Form\InputFile::class);
+        Blade::component('bs-datepicker', \DigitalSwing\LBC\View\Components\Form\Datepicker::class);
 
-      Blade::component('bs-check', \Nh\BsComponent\View\Components\Form\Check::class);
-      Blade::component('bs-dynamic', \Nh\BsComponent\View\Components\Form\Dynamic::class);
-      Blade::component('bs-editor', \Nh\BsComponent\View\Components\Form\Editor::class);
+        Blade::component('bs-check', \DigitalSwing\LBC\View\Components\Form\Check::class);
+        Blade::component('bs-dynamic', \DigitalSwing\LBC\View\Components\Form\Dynamic::class);
+        Blade::component('bs-editor', \DigitalSwing\LBC\View\Components\Form\Editor::class);
 
-      Blade::component('bs-alert', \Nh\BsComponent\View\Components\Alert::class);
-      Blade::component('bs-blockquote', \Nh\BsComponent\View\Components\Blockquote::class);
-      Blade::component('bs-breadcrumb', \Nh\BsComponent\View\Components\Breadcrumb::class);
-      Blade::component('bs-card', \Nh\BsComponent\View\Components\Card::class);
-      Blade::component('bs-figure', \Nh\BsComponent\View\Components\Figure::class);
-      Blade::component('bs-modal', \Nh\BsComponent\View\Components\Modal::class);
-      Blade::component('bs-modal-confirm', \Nh\BsComponent\View\Components\ModalConfirm::class);
-      Blade::component('bs-loading', \Nh\BsComponent\View\Components\Loading::class);
-      Blade::component('bs-progress', \Nh\BsComponent\View\Components\Progress::class);
-      Blade::component('bs-toast', \Nh\BsComponent\View\Components\Toast::class);
+        Blade::component('bs-alert', \DigitalSwing\LBC\View\Components\Alert::class);
+        Blade::component('bs-blockquote', \DigitalSwing\LBC\View\Components\Blockquote::class);
+        Blade::component('bs-breadcrumb', \DigitalSwing\LBC\View\Components\Breadcrumb::class);
+        Blade::component('bs-card', \DigitalSwing\LBC\View\Components\Card::class);
+        Blade::component('bs-figure', \DigitalSwing\LBC\View\Components\Figure::class);
+        Blade::component('bs-modal', \DigitalSwing\LBC\View\Components\Modal::class);
+        Blade::component('bs-modal-confirm', \DigitalSwing\LBC\View\Components\ModalConfirm::class);
+        Blade::component('bs-loading', \DigitalSwing\LBC\View\Components\Loading::class);
+        Blade::component('bs-progress', \DigitalSwing\LBC\View\Components\Progress::class);
+        Blade::component('bs-toast', \DigitalSwing\LBC\View\Components\Toast::class);
 
+        Blade::component('bs-navs', \DigitalSwing\LBC\View\Components\Navs::class);
+        Blade::component('bs-tooltip', \DigitalSwing\LBC\View\Components\Tooltip::class);
     }
 }
