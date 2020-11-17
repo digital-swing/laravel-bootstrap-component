@@ -17,6 +17,9 @@
       "DigitalSwing\\LBC\\": "src/"
     }
   },
+  "require": {
+    "illuminate/translation": "^7.29.3"
+  },
   "extra": {
     "laravel": {
       "providers": [
@@ -24,6 +27,5 @@
       ]
     }
   },
-  "minimum-stability": "dev",
-  "require": {}
+  "minimum-stability": "dev"
 }
